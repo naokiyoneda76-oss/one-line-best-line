@@ -7,8 +7,8 @@ LINE = "I pay $40 a month to walk past my gym like a hamster with a restraining 
 def main():
     output_path = Path(OUTPUT_PATH)
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    with output_path.open("w", encoding="utf-8", newline="") as output_file:
-        output_file.write(LINE)
+    with output_path.open("wb") as output_file:
+        output_file.write(LINE.encode("utf-8"))
 
 
 if __name__ == "__main__":
